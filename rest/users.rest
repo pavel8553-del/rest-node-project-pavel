@@ -1,0 +1,67 @@
+### Create/ Add new user
+POST http://localhost:3000/api/v1/users
+Content-Type: application/json
+
+{
+  "name": {
+    "first": "Noam",
+    "middle": "",
+    "last": "Koren"
+  },
+  "address": {
+    "street": "Shifon1",
+    "city": "Shoham",
+    "country": "Israel",
+    "state": "Israel",
+    "houseNumber": 10,
+    "zip": "123457"
+  },
+  "image": {
+    "alt": "user-profile",
+    "url": "https://picsum.photos/200/300"
+  },
+  "phone": "0524720544",
+  "email": "Noam@Noam.com",
+  "isBusiness": false,
+  "password": "Aa123456!"
+}
+
+### Get All Users
+GET http://localhost:3000/api/v1/users
+Authorization: bearer
+
+### Login user
+POST http://localhost:3000/api/v1/users/login
+Content-Type: application/json
+
+{
+    "email": "user1@user1.com",
+    "password": "Aa123456!"
+}
+
+
+### Get user
+GET http://localhost:3000/api/v1/users
+Authorization: bearer
+### Update user
+PUT http://localhost:3000/api/v1/users
+Authorization: bearer 
+Content-Type: application/json
+
+{
+    "name":{
+        "first": "Ruti",
+        "last": "Israel"
+    }
+}
+
+
+### Delete user
+DELETE http://localhost:3000/api/v1/users
+Authorization: bearer 
+### Change business status
+PATCH http://localhost:3000/api/v1/users/USER_ID
+Authorization: bearer
+### Toggle business status
+PATCH http://localhost:3000/api/v1/users
+Authorization: bearer 

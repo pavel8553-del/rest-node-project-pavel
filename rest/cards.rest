@@ -1,0 +1,80 @@
+### Create new Card
+POST http://localhost:3000/api/v1/cards
+Authorization: bearer 
+Content-Type: application/json
+
+{
+    "title": "new card 2",
+    "subtitle": "rest client",
+    "description": "testing card",
+    "web": "https://google.com",
+    "address":{
+        "street": "Shobi",
+        "city": "Lod",
+        "country": "Israel",
+        "state": "IL",
+        "houseNumber": 12,
+        "zip": "8889019"
+    },
+    "image":{
+        "alt": "user-profile",
+        "url": "https://variety.com/wp-content/uploads/2024/06/5N7A0541-e1718042484447.jpg"
+    },
+    "phone": "0524720544",
+    "email": "pavel@gmail.com"
+}
+
+
+### Get all cards
+GET http://localhost:3000/api/v1/cards
+
+
+### Get specific card
+GET http://localhost:3000/api/v1/cards
+
+### Get my cards
+GET http://localhost:3000/api/v1/cards/my-cards
+Authorization: bearer 
+### Update card
+PUT http://localhost:3000/api/v1/cards
+Authorization: bearer 
+Content-Type: application/json
+
+{
+  "title": "new card",
+  "subtitle": "rest client",
+  "description": "testing card",
+  "web": "https://google.com",
+  "address": {
+    "street": "yehushafat",
+    "city": "ashdod",
+    "country": "israel",
+    "state": "IL",
+    "houseNumber": 17,
+    "zip": "7749019"
+  },
+  "image": {
+    "alt": "user-profile",
+    "url": "https://variety.com/wp-content/uploads/2024/06/5N7A0541-e1718042484447.jpg"
+  },
+  "phone": "0524720544",
+  "email": "pavel@gmail.com"
+}
+
+### Like / Unlike card
+PATCH http://localhost:3000/api/v1/cards
+Authorization: bearer 
+
+### Delete card
+DELETE http://localhost:3000/api/v1/cards
+Authorization: bearer 
+### Get deleted card
+GET http://localhost:3000/api/v1/cards
+
+
+###
+GET http://localhost:3000/api/v1/cards/CARD_ID
+
+###
+GET http://localhost:3000/api/v1/users/USER_ID
+Authorization: bearer 
